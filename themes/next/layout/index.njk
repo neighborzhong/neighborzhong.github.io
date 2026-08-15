@@ -1,0 +1,20 @@
+{% extends '_layout.njk' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block class %}index welcome-page{% endblock %}
+
+{% block content %}
+  <div class="welcome">
+    <h1 class="welcome-title">{{ title }}</h1>
+    <p class="welcome-subtitle">{{ config.description or '记录学习与生活的一点一滴' }}</p>
+    <div class="welcome-buttons">
+      <a class="btn btn-welcome" href="{{ url_for('/posts/') }}">
+        <i class="fa fa-file-text"></i> 查看文章
+      </a>
+      <a class="btn btn-welcome" href="{{ url_for('/about/') }}">
+        <i class="fa fa-user"></i> 关于我
+      </a>
+    </div>
+  </div>
+{% endblock %}

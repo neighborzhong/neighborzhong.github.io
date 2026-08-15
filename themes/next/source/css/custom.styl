@@ -1,0 +1,136 @@
+// =====================
+// 自定义样式：欢迎页 + 文章卡片
+// =====================
+
+// ---- 欢迎页 ----
+.welcome {
+  text-align: center;
+  padding: 140px 20px 90px;
+
+  .welcome-title {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 18px;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.15em;
+    color: #888;
+    margin: 0 0 46px;
+  }
+
+  .welcome-buttons {
+    .btn-welcome {
+      display: inline-block;
+      margin: 0 12px;
+      padding: 13px 36px;
+      border: 1px solid #1e88e5;
+      border-radius: 26px;
+      color: #1e88e5;
+      font-size: 1.05em;
+      transition: all .25s;
+
+      &:hover {
+        background: #1e88e5;
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(30, 136, 229, .35);
+      }
+    }
+  }
+}
+
+// ---- 文章列表页 ----
+.posts-page-title {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 26px;
+}
+
+.posts-grid {
+  .post-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+    padding: 26px 30px;
+    margin-bottom: 22px;
+    transition: box-shadow .25s, transform .25s;
+
+    &:hover {
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .12);
+      transform: translateY(-3px);
+    }
+
+    .post-card-left {
+      flex: 0 0 118px;
+      text-align: center;
+      margin-right: 30px;
+
+      .post-card-day {
+        display: block;
+        font-size: 2.6em;
+        font-weight: 700;
+        color: #1e88e5;
+        line-height: 1.1;
+      }
+
+      .post-card-month {
+        font-size: .9em;
+        color: #aaa;
+      }
+    }
+
+    .post-card-right {
+      flex: 1;
+      min-width: 0;
+
+      .post-card-title {
+        font-size: 1.35em;
+        font-weight: 600;
+        color: #222;
+        margin: 0 0 10px;
+        transition: color .2s;
+
+        &:hover {
+          color: #1e88e5;
+        }
+      }
+
+      .post-card-excerpt {
+        color: #666;
+        font-size: .95em;
+        line-height: 1.65;
+        margin: 0 0 12px;
+      }
+
+      .post-card-meta {
+        font-size: .85em;
+        color: #999;
+
+        .post-card-tag {
+          margin-left: 14px;
+        }
+      }
+    }
+  }
+}
+
+// 移动端：卡片改为上下排列
+@media (max-width: 767px) {
+  .posts-grid .post-card {
+    flex-direction: column;
+    text-align: center;
+
+    .post-card-left {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+
+    .post-card-right .post-card-excerpt {
+      text-align: left;
+    }
+  }
+}

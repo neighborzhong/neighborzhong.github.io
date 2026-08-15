@@ -102,3 +102,9 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# ---- 自定义：注入 NexT 样式 ----
+theme_config:
+  injects:
+    style:
+      - custom
